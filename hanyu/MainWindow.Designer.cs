@@ -1,4 +1,4 @@
-﻿namespace hanyu
+namespace hanyu
 {
     partial class MainWindow
     {
@@ -216,7 +216,7 @@
             this.ctlCopyRight.Name = "ctlCopyRight";
             this.ctlCopyRight.Size = new System.Drawing.Size(79, 18);
             this.ctlCopyRight.TabIndex = 4;
-            this.ctlCopyRight.Text = "By RyuaNerin";
+            this.ctlCopyRight.Text = "By Caresquare Inc";
             this.ctlCopyRight.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.ctlCopyRight.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ctlCopyRight_MouseDoubleClick);
             // 
@@ -231,7 +231,7 @@
             this.MinimumSize = new System.Drawing.Size(360, 220);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "하뉴";
+            this.Text = "공인인증서 관리 프로그램";
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.ctlPanel.ResumeLayout(false);
             this.ctlPanel.PerformLayout();

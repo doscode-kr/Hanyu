@@ -4,7 +4,7 @@
 
 ![](hanyu_0.png)
 
-# [최신 릴리즈 다운로드](https://github.com/RyuaNerin/Hanyu/releases/latest)
+# [최신 릴리즈 다운로드 (master 반영시 주소 변경 예정)]([https://github.com/RyuaNerin/Hanyu/releases/latest](https://github.com/doscode-kr/Hanyu/releases/tag/v2.0.1)
 
 # 설명
 
@@ -31,9 +31,9 @@
 
 5. 비밀번호 `A` 를 입혁 후
 
-6. 원하는 비밀번호 입력 (비밀번호 길이/조건 제한 없음)
+6. 원하는 비밀번호 입력
+- **다수의 인증서 관리 프로그램이 8자 이상을 요구합니다. 8자 이상으로 설정하시는걸 추천합니다**
 
-    - **일부 모바일 앱에서는 8자 이상을 오구하므로 8자 이상으로 설정하시는걸 추천합니다**
 
 7. 모바일로 인증서 복사
 

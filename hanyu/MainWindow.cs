@@ -83,9 +83,9 @@ namespace hanyu
 
                 var passwd = (string)frm.Tag;
                 if (cert.CheckPassword(passwd))
-                    MessageBox.Show(this, "비밀번호가 일치합니다",        this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(this, "비밀번호가 일치합니다",        this.Text, MessageBoxButtons.OK);
                 else
-                    MessageBox.Show(this, "비밀번호가 틀립니다.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "비밀번호가 틀립니다.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
@@ -104,7 +104,7 @@ namespace hanyu
                 var oldPassword = (string)frm.Tag;
                 if (!cert.CheckPassword(oldPassword))
                 {
-                    MessageBox.Show(this, "비밀번호가 일치하지 않습니다.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "비밀번호가 일치하지 않습니다.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return;
                 }
 
@@ -118,15 +118,15 @@ namespace hanyu
 
                 if (!newPassword.Equals(newPassword2, StringComparison.CurrentCulture))
                 {
-                    MessageBox.Show(this, "두 비밀번호가 일치하지 않습니다!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "두 비밀번호가 일치하지 않습니다!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return;
                 }
 
 
                 if (cert.ChangePassword(oldPassword, newPassword))
-                    MessageBox.Show(this, "비밀번호를 변경하였습니다!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(this, "비밀번호를 변경하였습니다!", this.Text, MessageBoxButtons.OK);
                 else
-                    MessageBox.Show(this, "알 수 없는 오류가 발생하였습니다.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(this, "알 수 없는 오류가 발생하였습니다.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
@@ -188,7 +188,7 @@ namespace hanyu
                     var oldPassword = (string)frm.Tag;
                     if (!cert.CheckPassword(oldPassword))
                     {
-                        MessageBox.Show(this, "비밀번호가 일치하지 않습니다.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show(this, "비밀번호가 일치하지 않습니다.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         return;
                     }
                 }

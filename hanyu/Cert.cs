@@ -155,24 +155,21 @@ namespace hanyu
 
             foreach (var der in this.m_der) File.Move(der, Path.Combine(newPath, Path.GetFileName(der)));
             foreach (var key in this.m_key) File.Move(key, Path.Combine(newPath, Path.GetFileName(key)));
+
+            Directory.Delete(this.m_certDir, true);
             
             this.AutoRemoveNpki();
         }
 
         public void Remove()
         {
-            foreach (var der in this.m_der) File.Delete(der);
-            foreach (var key in this.m_key) File.Delete(key);
-
-            Directory.Delete(this.m_certDir);
+            Directory.Delete(this.m_certDir, true);
 
             this.AutoRemoveNpki();
         }
 
         private void AutoRemoveNpki()
         {
-            Directory.Delete(this.m_certDir);
-
             bool existsCerts = false;
             foreach (var caDir in Directory.GetDirectories(this.m_npkiDir))
             {

@@ -36,9 +36,9 @@ namespace hanyu
                     Text = cert.Name
                 };
 
-                item.SubItems.Add(cert.Type);
                 item.SubItems.Add(cert.NotAfter .ToString("yy-MM-dd"));
                 item.SubItems.Add(cert.Drive);
+                item.SubItems.Add(cert.Type);
                 item.SubItems.Add(cert.Ca);
 
                 if (cert.NotAfter < DateTime.Now)

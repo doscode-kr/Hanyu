@@ -32,9 +32,9 @@ namespace hanyu
             this.ctlPanel = new System.Windows.Forms.TableLayoutPanel();
             this.ctlCerts = new System.Windows.Forms.ListView();
             this.ctlCertsName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ctlCertsType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ctlCertsNotAfter = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ctlCertsDrive = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ctlCertsType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ctlCertsCA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ctlRefresh = new System.Windows.Forms.Button();
             this.ctlCertsListDesc = new System.Windows.Forms.Label();
@@ -69,16 +69,16 @@ namespace hanyu
             this.ctlPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.ctlPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.ctlPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.ctlPanel.Size = new System.Drawing.Size(395, 196);
+            this.ctlPanel.Size = new System.Drawing.Size(495, 196);
             this.ctlPanel.TabIndex = 0;
             // 
             // ctlCerts
             // 
             this.ctlCerts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ctlCertsName,
-            this.ctlCertsType,
             this.ctlCertsNotAfter,
             this.ctlCertsDrive,
+            this.ctlCertsType,
             this.ctlCertsCA});
             this.ctlPanel.SetColumnSpan(this.ctlCerts, 2);
             this.ctlCerts.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -89,7 +89,7 @@ namespace hanyu
             this.ctlCerts.MultiSelect = false;
             this.ctlCerts.Name = "ctlCerts";
             this.ctlCerts.ShowGroups = false;
-            this.ctlCerts.Size = new System.Drawing.Size(389, 142);
+            this.ctlCerts.Size = new System.Drawing.Size(489, 142);
             this.ctlCerts.TabIndex = 1;
             this.ctlCerts.UseCompatibleStateImageBehavior = false;
             this.ctlCerts.View = System.Windows.Forms.View.Details;
@@ -99,31 +99,31 @@ namespace hanyu
             // 
             this.ctlCertsName.Text = "이름";
             this.ctlCertsName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ctlCertsName.Width = 80;
-            // 
-            // ctlCertsType
-            // 
-            this.ctlCertsType.Text = "종류";
-            this.ctlCertsType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ctlCertsType.Width = 70;
+            this.ctlCertsName.Width = 200;
             // 
             // ctlCertsNotAfter
             // 
             this.ctlCertsNotAfter.Text = "유효기간";
             this.ctlCertsNotAfter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ctlCertsNotAfter.Width = 70;
+            this.ctlCertsNotAfter.Width = 150;
             // 
             // ctlCertsDrive
             // 
             this.ctlCertsDrive.Text = "위치";
             this.ctlCertsDrive.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ctlCertsDrive.Width = 50;
+            this.ctlCertsDrive.Width = 100;
+            // 
+            // ctlCertsType
+            // 
+            this.ctlCertsType.Text = "종류";
+            this.ctlCertsType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ctlCertsType.Width = 150;
             // 
             // ctlCertsCA
             // 
             this.ctlCertsCA.Text = "발급자";
             this.ctlCertsCA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ctlCertsCA.Width = 90;
+            this.ctlCertsCA.Width = 150;
             // 
             // ctlRefresh
             // 
@@ -216,7 +216,7 @@ namespace hanyu
             this.ctlCopyRight.Name = "ctlCopyRight";
             this.ctlCopyRight.Size = new System.Drawing.Size(79, 18);
             this.ctlCopyRight.TabIndex = 4;
-            this.ctlCopyRight.Text = "By Caresquare Inc";
+            this.ctlCopyRight.Text = "By 아임파인 일만사업팀";
             this.ctlCopyRight.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.ctlCopyRight.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ctlCopyRight_MouseDoubleClick);
             // 
@@ -224,11 +224,11 @@ namespace hanyu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 196);
+            this.ClientSize = new System.Drawing.Size(700, 400);
             this.Controls.Add(this.ctlPanel);
-            this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Font = new System.Drawing.Font("맑은 고딕", 13.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MinimumSize = new System.Drawing.Size(360, 220);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "공인인증서 관리 프로그램";
